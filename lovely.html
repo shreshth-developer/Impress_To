@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Special Moments</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Raleway:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6c5ce7, #ff8e8e);
+            background-size: 400% 400%;
+            font-family: 'Raleway', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            color: #fff;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .love-card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            padding: 3rem 2rem;
+            border-radius: 2rem;
+            max-width: 500px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+
+        .love-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .heart-container {
+            position: relative;
+            height: 100px;
+            margin-bottom: 2rem;
+        }
+
+        .heart {
+            font-size: 4rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .sparkles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .sparkle {
+            position: absolute;
+            background: white;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            animation: sparkle 1.5s infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-15px) scale(1.1);
+            }
+        }
+
+        @keyframes sparkle {
+
+            0%,
+            100% {
+                transform: scale(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1) rotate(180deg);
+                opacity: 1;
+            }
+        }
+
+        .message {
+            position: relative;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            margin: 2rem 0;
+            transition: transform 0.3s ease;
+        }
+
+        .message:hover {
+            transform: scale(1.02);
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .btn-back {
+            background: rgba(255, 255, 255, 0.9);
+            color: #6c5ce7;
+            border: none;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 280px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .btn-back:hover {
+            background: #6c5ce7;
+            color: #fff;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-back::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-back:hover::before {
+            left: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .btn-back {
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
+                max-width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn-back {
+                font-size: 0.9rem;
+                padding: 0.7rem 1.2rem;
+                max-width: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="love-card">
+        <div class="heart-container">
+            <div class="sparkles">
+                <div class="sparkle" style="top: 20%; left: 30%"></div>
+                <div class="sparkle" style="top: 60%; left: 70%"></div>
+                <div class="sparkle" style="top: 40%; left: 50%"></div>
+            </div>
+            <div class="heart">💝</div>
+        </div>
+        <h1>Our Special Moments</h1>
+        <div class="message">
+            <p>Let's cozy up, laugh, and get lost in a movie together — no matter the distance. 
+            I hope ❤️</p>
+            <p>I know that whenever we have talked to each other, there has been a fight. I don't know why, but I really enjoyed fighting with you. I hope you will understand.</p>
+        </div>
+        <div class="message">
+            <p>Distance means so little when Love means so much 💫</p>
+            <p>You know ? where we we met first time if you remember so please message me !</p>
+            <p>So Let's Made Some Fun ! And We watch Movies? 🎬🌟</p>
+        </div>
+        <div class="btn-container">
+            <a href="index.html" class="btn-back">✨ Go Back ✨</a>
+        </div>
+    </div>
+
+    <script>
+        // Create random sparkles
+        function createSparkles() {
+            const sparklesContainer = document.querySelector('.sparkles');
+            for (let i = 0; i < 15; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 2 + 's';
+                sparklesContainer.appendChild(sparkle);
+            }
+        }
+        createSparkles();
+
+
+
